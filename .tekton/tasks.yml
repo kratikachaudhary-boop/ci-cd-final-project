@@ -1,0 +1,20 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: cleanup
+spec:
+  description: This task will clean up a workspace by deleting all the files.
+  workspaces:
+    - name: source
+  steps:
+    - name: remove
+      image: alpine:3
+      env:
+        - name: WORKSPACE_SOURCE_PATH
+          value: ${workspace.source.path}
+      workingDir: ${workspace.source.path}
+      securityContext:
+        runAsNonRoot: No
+        runAsUser: 0
+      script: |
+        {placeholder}
