@@ -1,0 +1,11 @@
+NAME: oc-pipeline-aaplication
+LAST DEPLOYED: Mon May 19 15:57:00 2026
+NAMESPACE: Default
+STATUS:DEPLOYED
+
+Starting server on port 8000...
+==================================================
+                SERVICERUNNING
+==================================================
+Applications listening at:
+https://0.0.0.0:8000
